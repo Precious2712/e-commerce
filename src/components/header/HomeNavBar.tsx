@@ -10,7 +10,7 @@ import {
   ChevronRight
 } from "lucide-react"
 import { useState } from "react"
-import { dropDown } from "../prod/categories";
+import { dropDown } from "../../data/prod/categories";
 import Link from "next/link";
 
 
@@ -30,7 +30,7 @@ export function HomeNavBar() {
             <ShoppingBag className="w-5 h-5 text-white" />
           </div>
           <div>
-            <h1 className="text-white font-bold text-lg">Daily Market</h1>
+            <h1 className="text-white font-bold text-[14px]">Daily Market</h1>
             <p className="text-blue-100 text-xs">Your shopping destination</p>
           </div>
         </div>
@@ -110,7 +110,7 @@ export function HomeNavBar() {
             <ShoppingBag className="w-5 h-5 text-white" />
           </div>
           <div>
-            <h1 className="text-white font-bold text-lg">Daily Market</h1>
+            <h1 className="text-white font-bold ">Daily Market</h1>
             <p className="text-blue-100 text-xs">Your shopping destination</p>
           </div>
         </div>

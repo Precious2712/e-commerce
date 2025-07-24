@@ -86,7 +86,7 @@ export function WomenWardRobeNav() {
           <nav className="space-y-1">
             <Link href='/'>
               <button className="bg-blue-500 w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
-                <span>Home</span>
+                <span className="text-[12px]">Home</span>
               </button>
             </Link>
             <div className="mt-3">
@@ -96,7 +96,7 @@ export function WomenWardRobeNav() {
                   onClick={() => handleShowItem(item)}
                   className="w-full  h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
                 >
-                  <span className="font-medium">{item}</span>
+                  <span className="font-medium text-[12px]">{item}</span>
                 </button>
               ))}
             </div>
@@ -139,7 +139,7 @@ export function WomenWardRobeNav() {
               <nav className="space-y-2">
                 <Link href='/'>
                   <button className="bg-blue-500 w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
-                    <span>Home</span>
+                    <span className="text-[12px]">Home</span>
                   </button>
                 </Link>
                 <div className="mt-3">
@@ -149,7 +149,7 @@ export function WomenWardRobeNav() {
                       onClick={() => handleShowItem(item)}
                       className="w-full h-[6vh] text-left px-4 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
                     >
-                      <span className="font-medium">{item}</span>
+                      <span className="font-medium text-[12px]">{item}</span>
                     </button>
                   ))}
                 </div>

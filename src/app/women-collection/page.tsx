@@ -1,6 +1,6 @@
 'use client';
 
-import { WomenWardRobeNav } from "@/data/header/WomenWardRobeNav";
+import { WomenWardRobeNav } from "@/components/header/WomenWardRobeNav";
 
 export default function WomenClothingCollectionPage() {
     return (

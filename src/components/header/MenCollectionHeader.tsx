@@ -4,12 +4,20 @@ import { Button } from "@/components/ui/button"
 import { AlignRight, ShoppingBag, X, User, LogOut } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { MenClothing } from "../clothing/MenClothing"
+import { WomenClothing } from "../clothing/WomenClothing"
 
 export function MenCollectionHeader() {
-  const [mobile, setMobile] = useState(false)
+  const [mobile, setMobile] = useState(false);
+  const [items, setItem] = useState('');
+  console.log(items, 'itemss');
+
 
   function handleShowItem(menu: string) {
-    alert(menu)
+    alert(menu);
+    setItem(menu);
+    console.log('item-', items);
+
   }
 
   function handleSideBar() {
@@ -26,7 +34,7 @@ export function MenCollectionHeader() {
             <ShoppingBag className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="font-bold text-xl text-slate-800">Daily Market</h1>
+            <h1 className="font-bold text-1xl text-slate-800">Daily Market</h1>
             <p className="text-sm text-slate-500">Your shopping destination</p>
           </div>
         </div>
@@ -57,33 +65,50 @@ export function MenCollectionHeader() {
         </Button>
       </header>
 
-      <aside className="hidden lg:block fixed left-0 top-0 w-64 h-screen bg-white/95 backdrop-blur-md shadow-2xl shadow-slate-900/10 border-r border-slate-200/60 z-40 overflow-y-auto scrollbar-hide">
-        <div className="pt-24 px-6 pb-6">
-          <div className="mb-6">
-            <h2 className="text-lg font-semibold text-slate-800 mb-2">Categories</h2>
-            <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
-          </div>
-
-          <nav className="space-y-2">
-            <Link href='/'>
-              <button className="bg-blue-500 w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
-                <span>Home</span>
-              </button>
-            </Link>
-            <div className="mt-3">
-              {menuItems.map((item, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleShowItem(item)}
-                  className="w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
-                >
-                  <span className="font-medium">{item}</span>
-                </button>
-              ))}
+      <div className="">
+        <aside className="hidden lg:block fixed left-0 top-0 w-64 h-screen bg-white/95 backdrop-blur-md shadow-2xl shadow-slate-900/10 border-r border-slate-200/60 z-40 overflow-y-auto scrollbar-hide">
+          <div className="pt-24 px-6 pb-6">
+            <div className="mb-6">
+              <h2 className="text-lg font-semibold text-slate-800 mb-2">Categories</h2>
+              <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
             </div>
-          </nav>
+
+            <nav className="space-y-2">
+              <Link href='/'>
+                <button className="bg-blue-500 text-[13px] w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
+                  <span>Home</span>
+                </button>
+              </Link>
+              <div className="mt-3">
+                {menuItems.map((item, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleShowItem(item)}
+                    className="w-full h-[6vh] text-left px-3.5 rounded-xl text-[13px] text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
+                  >
+                    <span className="font-medium">{item}</span>
+                  </button>
+                ))}
+              </div>
+            </nav>
+          </div>
+        </aside>
+
+        <div className="mt-32 ml-[300px] w-[70%] bg-pink-500 ">
+          {items === 'Jean' && (
+            <div className="">
+              <MenClothing />
+            </div>
+          )}
+
+          {items === '' && (
+            <div className="">
+              <WomenClothing />
+            </div>
+          )}
         </div>
-      </aside>
+
+      </div>
 
       {mobile && (
         <>
@@ -120,7 +145,7 @@ export function MenCollectionHeader() {
               <nav className="space-y-2">
                 <Link href='/'>
                   <button className="bg-blue-500 w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
-                    <span>Home</span>
+                    <span className="text-[12px]">Home</span>
                   </button>
                 </Link>
                 <div className="mt-3">
@@ -130,7 +155,7 @@ export function MenCollectionHeader() {
                       onClick={() => handleShowItem(item)}
                       className="w-full h-[6vh] text-left px-4 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
                     >
-                      <span className="font-medium">{item}</span>
+                      <span className="font-medium text-[12px]">{item}</span>
                     </button>
                   ))}
                 </div>

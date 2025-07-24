@@ -1,6 +1,6 @@
 'use client';
 
-import { MenCollectionHeader } from "@/data/header/MenCollectionHeader";
+import { MenCollectionHeader } from "@/components/header/MenCollectionHeader";
 
 export default function MenClothingCollectionPage() {
     return (

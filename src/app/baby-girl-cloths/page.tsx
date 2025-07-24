@@ -1,6 +1,6 @@
 'use client';
 
-import { BabyGirlNav } from "@/data/header/BabyGirlNav";
+import { BabyGirlNav } from "@/components/header/BabyGirlNav";
 
 export default function BabyGirlCollectionPage() {
     return (
