@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { AlignRight, ShoppingBag, X, User, LogOut } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import { MenClothing } from "../clothing/MenClothing"
+import { MenClothing } from "../clothing/HexashopPage"
 import { WomenClothing } from "../clothing/WomenClothing"
 
 export function MenCollectionHeader() {
@@ -27,7 +27,7 @@ export function MenCollectionHeader() {
   const menuItems = ["Jean", "Shirt", "Trouser", "Boxer", "Wrist-watch", "Sneaker", "Shoe", "Palm-slipper"]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen pb-8">
       <header className="w-full py-4 px-1.5 lg:px-5 fixed top-0 flex justify-between items-center bg-white/95 backdrop-blur-md border-b border-slate-200/60 shadow-lg shadow-slate-900/5 z-50">
         <div className="flex items-center space-x-4">
           <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 transition-transform hover:scale-105">
@@ -84,7 +84,7 @@ export function MenCollectionHeader() {
                   <button
                     key={i}
                     onClick={() => handleShowItem(item)}
-                    className="w-full h-[6vh] text-left px-3.5 rounded-xl text-[13px] text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
+                    className="w-full h-[6vh] text-left px-3.5 rounded-xl text-xs text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
                   >
                     <span className="font-medium">{item}</span>
                   </button>
@@ -94,7 +94,7 @@ export function MenCollectionHeader() {
           </div>
         </aside>
 
-        <div className="mt-32 ml-[300px] w-[70%] bg-pink-500 ">
+        <div className="mt-24 ml-[300px] w-[70%] ">
           {items === 'Jean' && (
             <div className="">
               <MenClothing />

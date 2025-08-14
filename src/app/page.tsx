@@ -1,4 +1,5 @@
-import { MenClothing } from "@/components/clothing/MenClothing";
+
+import { HexashopPage } from "@/components/clothing/HexashopPage";
 import { WomenClothing } from "@/components/clothing/WomenClothing";
 import { HomeNavBar } from "@/components/header/HomeNavBar";
 import Image from "next/image";
@@ -10,12 +11,8 @@ export default function Home() {
         <HomeNavBar />
       </div>
 
-      <div className="mt-20 bg-amber-200">
-        <MenClothing />
-      </div>
-
       <div className="mt-16">
-        <WomenClothing />
+        <HexashopPage />
       </div>
     </div>
   );

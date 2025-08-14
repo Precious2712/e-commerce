@@ -251,7 +251,6 @@ export function HomeNavBar() {
           </Button>
         </div>
       </div>
-
     </div>
   )
 }
