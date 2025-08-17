@@ -4,20 +4,19 @@ import { Button } from "@/components/ui/button"
 import { AlignRight, ShoppingBag, X, User, LogOut } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import { MenClothing } from "../clothing/HexashopPage"
-import { WomenClothing } from "../clothing/WomenClothing"
+import { MenCollectionFashion } from "../clothing/MenFashionItem"
+import { MenJeansCollection } from "../clothing/MenJeansCollection"
 
-export function MenCollectionHeader() {
+export function MenCollectionPage() {
   const [mobile, setMobile] = useState(false);
   const [items, setItem] = useState('');
   console.log(items, 'itemss');
 
 
   function handleShowItem(menu: string) {
-    alert(menu);
+    // alert(menu);
     setItem(menu);
     console.log('item-', items);
-
   }
 
   function handleSideBar() {
@@ -27,7 +26,7 @@ export function MenCollectionHeader() {
   const menuItems = ["Jean", "Shirt", "Trouser", "Boxer", "Wrist-watch", "Sneaker", "Shoe", "Palm-slipper"]
 
   return (
-    <div className="min-h-screen pb-8">
+    <div className="min-h-screen pb-8 ">
       <header className="w-full py-4 px-1.5 lg:px-5 fixed top-0 flex justify-between items-center bg-white/95 backdrop-blur-md border-b border-slate-200/60 shadow-lg shadow-slate-900/5 z-50">
         <div className="flex items-center space-x-4">
           <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 transition-transform hover:scale-105">
@@ -66,7 +65,7 @@ export function MenCollectionHeader() {
       </header>
 
       <div className="">
-        <aside className="hidden lg:block fixed left-0 top-0 w-64 h-screen bg-white/95 backdrop-blur-md shadow-2xl shadow-slate-900/10 border-r border-slate-200/60 z-40 overflow-y-auto scrollbar-hide">
+        <aside className="hidden lg:block fixed left-0 top-0 w-60  h-screen bg-white/95 backdrop-blur-md shadow-2xl shadow-slate-900/10 border-r border-slate-200/60 z-40 overflow-y-auto scrollbar-hide">
           <div className="pt-24 px-6 pb-6">
             <div className="mb-6">
               <h2 className="text-lg font-semibold text-slate-800 mb-2">Categories</h2>
@@ -94,20 +93,33 @@ export function MenCollectionHeader() {
           </div>
         </aside>
 
-        <div className="mt-24 ml-[300px] w-[70%] ">
+        <div className="hidden lg:block pt-24 ml-[260px]">
           {items === 'Jean' && (
             <div className="">
-              <MenClothing />
+              <MenJeansCollection />
             </div>
           )}
 
           {items === '' && (
             <div className="">
-              <WomenClothing />
+              <MenCollectionFashion />
             </div>
           )}
         </div>
 
+        <div className="mt-24 lg:hidden">
+          {items === 'Jean' && (
+            <div className="">
+              <MenJeansCollection />
+            </div>
+          )}
+
+          {items === '' && (
+            <div className="">
+              <MenCollectionFashion />
+            </div>
+          )}
+        </div>
       </div>
 
       {mobile && (

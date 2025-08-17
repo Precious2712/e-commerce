@@ -1,11 +1,12 @@
 'use client';
 
-import { MenCollectionHeader } from "@/components/header/MenCollectionHeader";
+import { MenCollectionPage } from "@/components/header/MenCollectionPage";
+
 
 export default function MenClothingCollectionPage() {
     return (
-        <div>
-            <MenCollectionHeader />
+        <div className="">
+            <MenCollectionPage />
         </div>
     )
 }

@@ -22,7 +22,7 @@ export function HomeNavBar() {
   const [home, setHome] = useState(false);
 
   return (
-    <div className="fixed top-0 w-full z-50 bg-black shadow-lg text-white">
+    <div className="fixed top-0 w-full z-50 bg-white shadow-lg text-black">
 
       <div className="flex justify-between items-center px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 lg:hidden">
         <div className="flex items-center space-x-3">
@@ -107,16 +107,16 @@ export function HomeNavBar() {
       <div className="hidden lg:flex lg:justify-between py-3 px-2.5">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center shadow-lg">
-            <ShoppingBag className="w-5 h-5 text-white" />
+            <ShoppingBag className="w-5 h-5 " />
           </div>
           <div>
-            <h1 className="text-white font-bold ">Daily Market</h1>
-            <p className="text-blue-100 text-xs">Your shopping destination</p>
+            <h1 className=" font-bold ">Daily Market</h1>
+            <p className="text-blue-300 text-xs">Your shopping destination</p>
           </div>
         </div>
 
         <div>
-          <ul className="flex gap-4 mt-3 text-[14px] text-white">
+          <ul className="flex gap-4 mt-3 text-[12px]">
             <li className="relative">
               <div
                 onMouseEnter={() => setFashion(true)}
@@ -141,12 +141,12 @@ export function HomeNavBar() {
                         </Link>
                         <Link href='/baby-boy-cloths'>
                           <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                            Baby Boy Wear
+                            Teen Boy Fashion
                           </li>
                         </Link>
                         <Link href='/baby-girl-cloths'>
                           <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                            Baby Girl Wear
+                            Teen Girl Fashion
                           </li>
                         </Link>
                       </ul>
@@ -197,10 +197,10 @@ export function HomeNavBar() {
                     <div className="py-2.5 px-3.5 bg-white text-black shadow-2xl rounded-md">
                       <ul className="flex flex-col gap-2">
                         <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                          Fresh Produce
+                          Vegetables & Fruits
                         </li>
                         <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                          Dairy Products
+                          Bakery Products
                         </li>
                         <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
                           Beverages
@@ -213,40 +213,16 @@ export function HomeNavBar() {
             </li>
 
             <li className="relative">
-              <div
-                onMouseEnter={() => setHome(true)}
-                onMouseLeave={() => setHome(false)}
-                className="cursor-pointer hover:text-blue-200 transition-colors"
-              >
-                <div className="py-2 px-1">Home Appliances</div>
-                {home && (
-                  <div className="absolute top-2 left-0 w-[180px] z-50">
-                    <div className="h-14 w-full"></div>
-                    <div className="py-2.5 px-3.5 bg-white text-black shadow-2xl rounded-md">
-                      <ul className="flex flex-col gap-2">
-                        <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                          Kitchen Appliances
-                        </li>
-                        <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                          Cleaning Equipment
-                        </li>
-                        <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                          Electronics
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
-              </div>
+              <p className="py-2 px-1">Home Appliances</p>
             </li>
           </ul>
         </div>
 
         <div className="flex gap-2.5 mt-1">
-          <Button className="bg-blue-900 hover:bg-blue-800" variant="ghost">
+          <Button className="bg-blue-900 hover:bg-blue-800 text-[12px]" variant="ghost">
             Signup
           </Button>
-          <Button className="bg-red-400 hover:bg-red-500" variant="ghost">
+          <Button className="bg-red-400 hover:bg-red-500 text-[12px]" variant="ghost">
             Logout
           </Button>
         </div>
