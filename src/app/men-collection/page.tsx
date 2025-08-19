@@ -5,7 +5,7 @@ import { MenCollectionPage } from "@/components/header/MenCollectionPage";
 
 export default function MenClothingCollectionPage() {
     return (
-        <div className="">
+        <div className="pb-24 min-h-screen">
             <MenCollectionPage />
         </div>
     )

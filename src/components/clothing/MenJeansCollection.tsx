@@ -1,6 +1,8 @@
 "use client"
 
-import { ShoppingCart, Heart, Star } from "lucide-react"
+import { ShoppingCart, Heart, Star, Badge } from "lucide-react"
+import { Card, CardFooter } from "../ui/card"
+import { Button } from "../ui/button"
 
 interface JeansItem {
   id: number
@@ -93,84 +95,60 @@ export function MenJeansCollection() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 text-xs ">
-      {/* Products Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 text-xs">
-        {jeansItems.map((item) => (
-          <div
-            key={item.id}
-            className="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-          >
-            {/* Image Container */}
-            <div className="relative overflow-hidden bg-gray-50">
-              {item.tag && (
-                <div className="absolute top-3 left-3 z-10">
-                  <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getTagStyles(item.tag)}`}>
-                    {item.tag}
-                  </span>
-                </div>
-              )}
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 text-xs">
+      {jeansItems.map((product) => (
+        <Card
+          key={product.id}
+          className="group border-border hover:shadow-lg transition-all duration-300 hover:border-primary/20 p-0"
+        >
+          <div className="relative h-48 lg:h-56 overflow-hidden bg-muted">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute top-2 right-2 z-10 h-8 w-8 bg-background/80 hover:bg-background opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <Heart className="h-4 w-4" />
+            </Button>
 
-              {/* Wishlist Button */}
-              <button className="absolute top-3 right-3 z-10 p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-sm hover:bg-white transition-colors duration-200 opacity-0 group-hover:opacity-100">
-                <Heart className="w-4 h-4 text-gray-600 hover:text-red-500 transition-colors" />
-              </button>
-
-              <div className="aspect-[] overflow-hidden">
-                <img
-                  src={item.image || "/placeholder.svg"}
-                  alt={item.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-
-              {/* Quick Add Overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="w-full bg-white text-gray-900 py-2 px-4 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2">
-                  <ShoppingCart className="w-4 h-4" />
-                  Quick Add
-                </button>
-              </div>
-            </div>
-
-            {/* Product Info */}
-            <div className="p-5 text-xs">
-              <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors duration-200">
-                {item.name}
-              </h3>
-
-              {/* Rating */}
-              {item.rating && (
-                <div className="flex items-center gap-1 mb-3">
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`w-4 h-4 ${
-                          i < Math.floor(item.rating!) ? "text-yellow-400 fill-current" : "text-gray-300"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-600 ml-1">({item.rating})</span>
-                </div>
-              )}
-
-              {/* Price */}
-              <div className="flex items-center gap-2 mb-4 text-xs">
-                <span className="text-xs font-bold text-gray-900">{item.price}</span>
-                
-              </div>
-
-              {/* Add to Cart Button */}
-              <button className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-4 rounded-xl font-medium transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
-                <ShoppingCart className="w-4 h-4" />
-                Add to Cart
-              </button>
-            </div>
+            {/* Product Image */}
+            <img
+              src={product.image || "/placeholder.svg"}
+              alt={product.name}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        ))}
-      </div>
+
+          <CardFooter className="p-3 lg:p-4 flex flex-col items-start gap-2 text-xs">
+            {/* Product Name */}
+            <h3 className="font-medium  lg:line-clamp-2 text-foreground group-hover:text-primary transition-colors">
+              {product.name}
+            </h3>
+
+            {/* Rating */}
+            <div className="flex items-center gap-1">
+              <div className="flex items-center">
+                <Star className="h-3 w-3 lg:h-4 lg:w-4 fill-yellow-400 text-yellow-400" />
+                <span className="text-xs lg:text-sm font-medium ml-1">{product.rating}</span>
+              </div>
+              {/* <span className="text-xs text-muted-foreground">({product.reviews})</span> */}
+            </div>
+
+            {/* Price */}
+            <div className="flex items-center gap-2 w-full">
+              <span className="font-bold lg:text-foreground">${product.price}</span>
+              {product.originalPrice && (
+                <span className="text-xs lg:text-sm text-muted-foreground line-through">${product.originalPrice}</span>
+              )}
+            </div>
+
+            {/* Add to Cart Button */}
+            <Button className="w-full mt-2 h-8 lg:h-9 text-xs lg:text-sm  bg-blue-500 hover:bg-blue-800" variant="outline">
+              <ShoppingCart className="h-3 w-3 lg:h-4 lg:w-4 mr-1 lg:mr-2" />
+              Add to Cart
+            </Button>
+          </CardFooter>
+        </Card>
+      ))}
     </div>
   )
 }

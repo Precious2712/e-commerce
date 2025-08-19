@@ -4,14 +4,13 @@ import { Button } from "@/components/ui/button"
 import { AlignRight, ShoppingBag, X, User, LogOut } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import { MenCollectionFashion } from "../clothing/MenFashionItem"
-import { MenJeansCollection } from "../clothing/MenJeansCollection"
+import { menuItems } from "@/data/prod/items"
+import { useAppContext } from "../useContext/AppContext"
+import { DesktopMentFashionComp, MobileMenFashionComp } from "../Men/AllMenFashionComp"
 
 export function MenCollectionPage() {
+  const { items, setItem } = useAppContext();
   const [mobile, setMobile] = useState(false);
-  const [items, setItem] = useState('');
-  console.log(items, 'itemss');
-
 
   function handleShowItem(menu: string) {
     // alert(menu);
@@ -23,11 +22,9 @@ export function MenCollectionPage() {
     setMobile(!mobile)
   }
 
-  const menuItems = ["Jean", "Shirt", "Trouser", "Boxer", "Wrist-watch", "Sneaker", "Shoe", "Palm-slipper"]
-
   return (
-    <div className="min-h-screen pb-8 ">
-      <header className="w-full py-4 px-1.5 lg:px-5 fixed top-0 flex justify-between items-center bg-white/95 backdrop-blur-md border-b border-slate-200/60 shadow-lg shadow-slate-900/5 z-50">
+    <div className="">
+      <header className="w-full py-4 px-1.5 lg:px-5 fixed top-0 flex justify-between items-center bg-black backdrop-blur-md border-b border-slate-200/60 shadow-lg shadow-slate-900/5 z-50">
         <div className="flex items-center space-x-4">
           <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 transition-transform hover:scale-105">
             <ShoppingBag className="w-6 h-6 text-white" />
@@ -40,14 +37,14 @@ export function MenCollectionPage() {
 
         <div className="hidden lg:flex items-center gap-3">
           <Button
-            className="h-[7vh] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
+            className="h-[5.5vh] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xs shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
             size="sm"
           >
             <User className="w-4 h-4 mr-2" />
             Signup
           </Button>
           <Button
-            className="h-[7vh] bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg shadow-red-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-red-500/30 hover:-translate-y-0.5 cursor-pointer"
+            className="h-[5.5vh] bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white text-xs shadow-lg shadow-red-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-red-500/30 hover:-translate-y-0.5 cursor-pointer"
             size="sm"
           >
             <LogOut className="w-4 h-4 mr-2" />
@@ -66,19 +63,19 @@ export function MenCollectionPage() {
 
       <div className="">
         <aside className="hidden lg:block fixed left-0 top-0 w-60  h-screen bg-white/95 backdrop-blur-md shadow-2xl shadow-slate-900/10 border-r border-slate-200/60 z-40 overflow-y-auto scrollbar-hide">
-          <div className="pt-24 px-6 pb-6">
+          <div className="pt-24 px-6 pb-16">
             <div className="mb-6">
               <h2 className="text-lg font-semibold text-slate-800 mb-2">Categories</h2>
               <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
             </div>
 
-            <nav className="space-y-2">
+            <nav className="space-y-3">
               <Link href='/'>
                 <button className="bg-blue-500 text-[13px] w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
                   <span>Home</span>
                 </button>
               </Link>
-              <div className="mt-3">
+              <div className="mt-3 flex flex-col gap-3.5">
                 {menuItems.map((item, i) => (
                   <button
                     key={i}
@@ -94,32 +91,14 @@ export function MenCollectionPage() {
         </aside>
 
         <div className="hidden lg:block pt-24 ml-[260px]">
-          {items === 'Jean' && (
-            <div className="">
-              <MenJeansCollection />
-            </div>
-          )}
-
-          {items === '' && (
-            <div className="">
-              <MenCollectionFashion />
-            </div>
-          )}
+          <DesktopMentFashionComp />
         </div>
 
         <div className="mt-24 lg:hidden">
-          {items === 'Jean' && (
-            <div className="">
-              <MenJeansCollection />
-            </div>
-          )}
+          <MobileMenFashionComp />
 
-          {items === '' && (
-            <div className="">
-              <MenCollectionFashion />
-            </div>
-          )}
         </div>
+
       </div>
 
       {mobile && (
@@ -134,7 +113,7 @@ export function MenCollectionPage() {
 
               <div className="mb-8 space-y-3">
                 <Button
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg shadow-blue-500/25 transition-all duration-200"
+                  className="w-full h-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg shadow-blue-500/25 transition-all duration-200"
                   size="sm"
                 >
                   <User className="w-4 h-4 mr-2" />

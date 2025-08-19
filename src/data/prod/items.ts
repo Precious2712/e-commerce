@@ -1,0 +1,1 @@
+export const menuItems = ["Jean", "Shirt", "Trouser", "Boxer", "Wrist-watch", "Sneaker", "Shoe", "Palm-slipper"];

@@ -1,5 +1,7 @@
 "use client"
 
+import { Button } from "../ui/button"
+
 interface MenFashionItem {
   id: number
   name: string
@@ -7,7 +9,7 @@ interface MenFashionItem {
   image: string
 }
 
-export function MenCollectionFashion() {
+export function MenFashionItem() {
   const menFashionItems: MenFashionItem[] = [
     {
       id: 1,
@@ -88,7 +90,7 @@ export function MenCollectionFashion() {
       {menFashionItems.map((item) => (
         <div
           key={item.id}
-          className="bg-white rounded-lg shadow-2xs hover:shadow-xl transition-shadow duration-300 overflow-hidden group cursor-pointer"
+          className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group cursor-pointer"
         >
           <div className="relative h-48 overflow-hidden">
             <img
@@ -101,11 +103,11 @@ export function MenCollectionFashion() {
 
           <div className="p-4">
             <h3 className="font-semibold text-gray-800 text-sm mb-2 line-clamp-2">{item.name}</h3>
-            <div className="flex flex-wrap lg:flex lg:justify-between ">
-              <span className="text-lg font-bold text-blue-600">{item.price}</span>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200">
+            <div className="flex flex-wrap gap-5 lg:flex lg:justify-between items-center">
+              <span className="text-xs font-bold text-blue-600">{item.price}</span>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200">
                 Add to Cart
-              </button>
+              </Button>
             </div>
           </div>
         </div>
