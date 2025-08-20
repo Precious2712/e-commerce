@@ -1,107 +1,117 @@
-"use client"
+import { Card, CardFooter } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Star, Heart, ShoppingCart } from "lucide-react"
+import { useAppContext } from "../useContext/AppContext";
 
-import { ShoppingCart, Heart, Star, Badge } from "lucide-react"
-import { Card, CardFooter } from "../ui/card"
-import { Button } from "../ui/button"
-
-interface JeansItem {
-  id: number
-  name: string
-  price: string
-  originalPrice?: string
-  image: string
-  tag?: string
-  rating?: number
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  rating: number;
+  reviews: number;
+  image: string;
+  badge?: string;
+  isNew?: boolean;
 }
 
+const products: Product[] = [
+  {
+    id: 1,
+    name: "Wireless Headphones",
+    price: 199.99,
+    originalPrice: 249.99,
+    rating: 4.8,
+    reviews: 124,
+    image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/67/2853814/1.jpg?6103",
+    badge: "Sale",
+  },
+  {
+    id: 2,
+    name: "Smart Fitness Watch",
+    price: 299.99,
+    rating: 4.6,
+    reviews: 89,
+    image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/22/161498/1.jpg?8777",
+    isNew: true,
+  },
+  {
+    id: 3,
+    name: "Minimalist Backpack",
+    price: 79.99,
+    originalPrice: 99.99,
+    rating: 4.9,
+    reviews: 156,
+    image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/32/6241331/1.jpg?4325",
+    badge: "Popular",
+  },
+  {
+    id: 4,
+    name: "Wireless Charging Pad",
+    price: 49.99,
+    rating: 4.4,
+    reviews: 67,
+    image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/57/9136082/1.jpg?4798",
+  },
+  {
+    id: 5,
+    name: "Bluetooth Speaker",
+    price: 129.99,
+    originalPrice: 159.99,
+    rating: 4.7,
+    reviews: 203,
+    image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/84/859267/1.jpg?1795",
+    badge: "Sale",
+  },
+  {
+    id: 6,
+    name: "USB-C Hub",
+    price: 89.99,
+    rating: 4.5,
+    reviews: 45,
+    image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/52/018594/1.jpg?4079",
+    isNew: true,
+  },
+  {
+    id: 7,
+    name: "Ergonomic Mouse Pad",
+    price: 24.99,
+    rating: 4.3,
+    reviews: 78,
+    image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/98/1004752/1.jpg?9800",
+  },
+  {
+    id: 8,
+    name: "Portable Power Bank",
+    price: 59.99,
+    originalPrice: 79.99,
+    rating: 4.6,
+    reviews: 134,
+    image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/01/4595393/1.jpg?4932",
+    badge: "Sale",
+  },
+]
+
 export function MenJeansCollection() {
-  const jeansItems: JeansItem[] = [
-    {
-      id: 1,
-      name: "Classic Skinny Fit",
-      price: "$89.99",
-      originalPrice: "$120.00",
-      tag: "Best Seller",
-      rating: 4.8,
-      image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/79/4617352/1.jpg?3019",
-    },
-    {
-      id: 2,
-      name: "Straight Leg Dark Wash",
-      price: "$79.99",
-      rating: 4.6,
-      image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/22/4185204/1.jpg?8823",
-    },
-    {
-      id: 3,
-      name: "Bootcut Light Wash",
-      price: "$69.99",
-      rating: 4.5,
-      image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/05/0696752/1.jpg?2143",
-    },
-    {
-      id: 4,
-      name: "Premium Selvedge Raw",
-      price: "$199.99",
-      tag: "Premium",
-      rating: 4.9,
-      image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/78/4217352/1.jpg?2140",
-    },
-    {
-      id: 5,
-      name: "Vintage Acid Wash",
-      price: "$94.99",
-      tag: "Trending",
-      rating: 4.7,
-      image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/71/6619152/1.jpg?2381",
-    },
-    {
-      id: 6,
-      name: "Slim Fit Black",
-      price: "$84.99",
-      rating: 4.4,
-      image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/62/3922722/1.jpg?5963",
-    },
-    {
-      id: 7,
-      name: "Distressed Ripped",
-      price: "$109.99",
-      tag: "New",
-      rating: 4.3,
-      image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/89/397507/1.jpg?7865",
-    },
-    {
-      id: 8,
-      name: "Relaxed Comfort Fit",
-      price: "$74.99",
-      rating: 4.6,
-      image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/38/4317352/1.jpg?2098",
-    },
-  ]
-
-  const getTagStyles = (tag: string) => {
-    switch (tag) {
-      case "Premium":
-        return "bg-gradient-to-r from-amber-400 to-yellow-500 text-black"
-      case "Best Seller":
-        return "bg-gradient-to-r from-blue-600 to-indigo-600 text-white"
-      case "Trending":
-        return "bg-gradient-to-r from-red-500 to-pink-500 text-white"
-      case "New":
-        return "bg-gradient-to-r from-green-500 to-emerald-500 text-white"
-      default:
-        return "bg-gray-900 text-white"
-    }
-  }
-
+  const {handleAddToCart} = useAppContext();
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 text-xs">
-      {jeansItems.map((product) => (
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+      {products.map((product) => (
         <Card
           key={product.id}
           className="group border-border hover:shadow-lg transition-all duration-300 hover:border-primary/20 p-0"
         >
           <div className="relative h-48 lg:h-56 overflow-hidden bg-muted">
+            {(product.badge || product.isNew) && (
+              <Badge
+                variant={product.badge === "Sale" ? "destructive" : "secondary"}
+                className="absolute top-2 left-2 z-10 text-xs"
+              >
+                {product.badge || "New"}
+              </Badge>
+            )}
+
             <Button
               variant="ghost"
               size="icon"
@@ -110,7 +120,6 @@ export function MenJeansCollection() {
               <Heart className="h-4 w-4" />
             </Button>
 
-            {/* Product Image */}
             <img
               src={product.image || "/placeholder.svg"}
               alt={product.name}
@@ -118,31 +127,27 @@ export function MenJeansCollection() {
             />
           </div>
 
-          <CardFooter className="p-3 lg:p-4 flex flex-col items-start gap-2 text-xs">
-            {/* Product Name */}
-            <h3 className="font-medium  lg:line-clamp-2 text-foreground group-hover:text-primary transition-colors">
+          <CardFooter className="p-3 lg:p-4 flex flex-col items-start gap-2">
+            <h3 className="font-medium text-sm lg:text-sm line-clamp-2 text-foreground group-hover:text-primary transition-colors">
               {product.name}
             </h3>
 
-            {/* Rating */}
             <div className="flex items-center gap-1">
               <div className="flex items-center">
                 <Star className="h-3 w-3 lg:h-4 lg:w-4 fill-yellow-400 text-yellow-400" />
                 <span className="text-xs lg:text-sm font-medium ml-1">{product.rating}</span>
               </div>
-              {/* <span className="text-xs text-muted-foreground">({product.reviews})</span> */}
+              <span className="text-xs text-muted-foreground">({product.reviews})</span>
             </div>
 
-            {/* Price */}
             <div className="flex items-center gap-2 w-full">
-              <span className="font-bold lg:text-foreground">${product.price}</span>
+              <span className="font-bold text-sm lg:text-sm text-foreground">${product.price}</span>
               {product.originalPrice && (
                 <span className="text-xs lg:text-sm text-muted-foreground line-through">${product.originalPrice}</span>
               )}
             </div>
 
-            {/* Add to Cart Button */}
-            <Button className="w-full mt-2 h-8 lg:h-9 text-xs lg:text-sm  bg-blue-500 hover:bg-blue-800" variant="outline">
+            <Button onClick={()=>handleAddToCart(product)} className="w-full mt-2 h-8 lg:h-9 text-xs lg:text-sm bg-blue-700 hover:bg-blue-500" variant="outline">
               <ShoppingCart className="h-3 w-3 lg:h-4 lg:w-4 mr-1 lg:mr-2" />
               Add to Cart
             </Button>

@@ -1,6 +1,5 @@
 
 import { HexashopPage } from "@/components/clothing/HexashopPage";
-import { WomenClothing } from "@/components/clothing/MenFashionItem";
 import { HomeNavBar } from "@/components/header/HomeNavBar";
 import Image from "next/image";
 

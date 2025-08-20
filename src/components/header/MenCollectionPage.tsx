@@ -62,7 +62,7 @@ export function MenCollectionPage() {
       </header>
 
       <div className="">
-        <aside className="hidden lg:block fixed left-0 top-0 w-60  h-screen bg-white/95 backdrop-blur-md shadow-2xl shadow-slate-900/10 border-r border-slate-200/60 z-40 overflow-y-auto scrollbar-hide">
+        <aside className="hidden lg:block fixed left-0 top-0 w-50  h-screen bg-white/95 backdrop-blur-md shadow-2xl shadow-slate-900/10 border-r border-slate-200/60 z-40 overflow-y-auto scrollbar-hide">
           <div className="pt-24 px-6 pb-16">
             <div className="mb-6">
               <h2 className="text-lg font-semibold text-slate-800 mb-2">Categories</h2>
@@ -90,7 +90,7 @@ export function MenCollectionPage() {
           </div>
         </aside>
 
-        <div className="hidden lg:block pt-24 ml-[260px]">
+        <div className="hidden lg:block pt-24 ml-[230px] w-[80%]">
           <DesktopMentFashionComp />
         </div>
 
@@ -113,7 +113,7 @@ export function MenCollectionPage() {
 
               <div className="mb-8 space-y-3">
                 <Button
-                  className="w-full h-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg shadow-blue-500/25 transition-all duration-200"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg shadow-blue-500/25 transition-all duration-200"
                   size="sm"
                 >
                   <User className="w-4 h-4 mr-2" />

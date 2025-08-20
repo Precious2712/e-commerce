@@ -19,7 +19,6 @@ export function HomeNavBar() {
   const [fashion, setFashion] = useState(false);
   const [gadgets, setGadgets] = useState(false);
   const [grocery, setGrocery] = useState(false);
-  const [home, setHome] = useState(false);
 
   return (
     <div className="fixed top-0 w-full z-50 bg-white shadow-lg text-black">
@@ -67,7 +66,7 @@ export function HomeNavBar() {
                       {category.items.map((item) => (
                         <Link href={`${item.path}`}>
                           <button
-                            key={item.name}
+                            key={item.id}
                             className="w-full flex items-center space-x-3 p-2 rounded-md hover:bg-gray-50 transition-colors text-left group"
                             onClick={() => setIsOpen(false)}
                           >

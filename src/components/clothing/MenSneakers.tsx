@@ -2,17 +2,18 @@ import { Card, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Star, Heart, ShoppingCart } from "lucide-react"
+import { useAppContext } from "../useContext/AppContext";
 
 interface Product {
-  id: number
-  name: string
-  price: number
-  originalPrice?: number
-  rating: number
-  reviews: number
-  image: string
-  badge?: string
-  isNew?: boolean
+  id: number;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  rating: number;
+  reviews: number;
+  image: string;
+  badge?: string;
+  isNew?: boolean;
 }
 
 const products: Product[] = [
@@ -133,6 +134,7 @@ const products: Product[] = [
 ]
 
 export function MenSneakers() {
+  const {handleAddToCart} = useAppContext();
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
       {products.map((product) => (
@@ -185,7 +187,7 @@ export function MenSneakers() {
               )}
             </div>
 
-            <Button className="w-full mt-2 h-8 lg:h-9 text-xs lg:text-sm bg-blue-700 hover:bg-blue-500" variant="outline">
+            <Button onClick={()=>handleAddToCart(product)} className="w-full mt-2 h-8 lg:h-9 text-xs lg:text-sm bg-blue-700 hover:bg-blue-500" variant="outline">
               <ShoppingCart className="h-3 w-3 lg:h-4 lg:w-4 mr-1 lg:mr-2" />
               Add to Cart
             </Button>

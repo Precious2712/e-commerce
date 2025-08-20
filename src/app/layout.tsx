@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Mona_Sans, Roboto_Mono, Work_Sans, Space_Mono } from "next/font/google";
+import { Geist, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { AppProviderComp } from "@/components/useContext/AppContext";
 
