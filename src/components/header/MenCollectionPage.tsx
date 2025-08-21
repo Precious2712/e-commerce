@@ -7,6 +7,7 @@ import { useState } from "react"
 import { menuItems } from "@/data/prod/items"
 import { useAppContext } from "../useContext/AppContext"
 import { DesktopMentFashionComp, MobileMenFashionComp } from "../Men/AllMenFashionComp"
+import { CustomerCart } from "../user-cart/CustomerCart"
 
 export function MenCollectionPage() {
   const { items, setItem } = useAppContext();
@@ -50,15 +51,20 @@ export function MenCollectionPage() {
             <LogOut className="w-4 h-4 mr-2" />
             Logout
           </Button>
+          <CustomerCart />
         </div>
 
-        <Button
-          onClick={handleSideBar}
-          className="lg:hidden bg-slate-100 hover:bg-slate-200 text-slate-700 shadow-md transition-all duration-200 hover:shadow-lg cursor-pointer"
-          size="sm"
-        >
-          {mobile ? <X className="w-5 h-5" /> : <AlignRight className="w-5 h-5" />}
-        </Button>
+        <div className="flex gap-3 lg:hidden">
+          <Button
+            onClick={handleSideBar}
+            className="lg:hidden bg-slate-100 hover:bg-slate-200 text-slate-700 shadow-md transition-all duration-200 hover:shadow-lg cursor-pointer"
+            size="sm"
+          >
+            {mobile ? <X className="w-5 h-5" /> : <AlignRight className="w-5 h-5" />}
+          </Button>
+
+          <CustomerCart />
+        </div>
       </header>
 
       <div className="">
@@ -155,6 +161,8 @@ export function MenCollectionPage() {
           </aside>
         </>
       )}
+
+
     </div>
   )
 }

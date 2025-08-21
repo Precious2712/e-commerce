@@ -15,6 +15,7 @@ interface Product {
   image: string;
   badge?: string;
   isNew?: boolean;
+  quantity: number;
 }
 
 const products: Product[] = [
@@ -27,6 +28,7 @@ const products: Product[] = [
     reviews: 124,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/34/3053093/1.jpg?3723",
     badge: "Sale",
+    quantity: 1
   },
   {
     id: 2,
@@ -36,6 +38,7 @@ const products: Product[] = [
     reviews: 89,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/32/3774093/1.jpg?8284",
     isNew: true,
+    quantity: 1
   },
   {
     id: 3,
@@ -46,6 +49,7 @@ const products: Product[] = [
     reviews: 156,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/18/8037883/1.jpg?4822",
     badge: "Popular",
+    quantity: 1
   },
   {
     id: 4,
@@ -54,6 +58,7 @@ const products: Product[] = [
     rating: 4.4,
     reviews: 67,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/85/2622083/1.jpg?3079",
+    quantity: 1
   },
   {
     id: 5,
@@ -64,6 +69,7 @@ const products: Product[] = [
     reviews: 203,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/15/5818172/1.jpg?6654",
     badge: "Sale",
+    quantity: 1
   },
   {
     id: 6,
@@ -73,6 +79,7 @@ const products: Product[] = [
     reviews: 45,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/17/0615114/1.jpg?4165",
     isNew: true,
+    quantity: 1
   },
   {
     id: 7,
@@ -81,6 +88,7 @@ const products: Product[] = [
     rating: 4.3,
     reviews: 78,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/26/4759504/1.jpg?7166",
+    quantity: 1
   },
   {
     id: 8,
@@ -91,6 +99,7 @@ const products: Product[] = [
     reviews: 134,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/22/8894913/1.jpg?4663",
     badge: "Sale",
+    quantity: 1
   },
 ]
 

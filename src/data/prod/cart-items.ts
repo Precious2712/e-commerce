@@ -8,4 +8,5 @@ export interface boxItem {
     image: string;
     badge?: string;
     isNew?: boolean;
+    quantity: number
 }

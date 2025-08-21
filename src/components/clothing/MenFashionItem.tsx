@@ -16,11 +16,12 @@ interface Product {
   image: string
   badge?: string
   isNew?: boolean
+  quantity: number
 }
 
 const products: Product[] = [
   {
-    id: 1,
+    id: 9,
     name: "Wireless Headphones",
     price: 199.99,
     originalPrice: 249.99,
@@ -28,18 +29,20 @@ const products: Product[] = [
     reviews: 124,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/67/2853814/1.jpg?6103",
     badge: "Sale",
+    quantity: 1
   },
   {
-    id: 2,
+    id: 10,
     name: "Smart Fitness Watch",
     price: 299.99,
     rating: 4.6,
     reviews: 89,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/22/161498/1.jpg?8777",
     isNew: true,
+    quantity: 1
   },
   {
-    id: 3,
+    id: 11,
     name: "Minimalist Backpack",
     price: 79.99,
     originalPrice: 99.99,
@@ -47,17 +50,19 @@ const products: Product[] = [
     reviews: 156,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/32/6241331/1.jpg?4325",
     badge: "Popular",
+    quantity: 1
   },
   {
-    id: 4,
+    id: 12,
     name: "Wireless Charging Pad",
     price: 49.99,
     rating: 4.4,
     reviews: 67,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/57/9136082/1.jpg?4798",
+    quantity: 1
   },
   {
-    id: 5,
+    id: 13,
     name: "Bluetooth Speaker",
     price: 129.99,
     originalPrice: 159.99,
@@ -65,26 +70,29 @@ const products: Product[] = [
     reviews: 203,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/84/859267/1.jpg?1795",
     badge: "Sale",
+    quantity: 1
   },
   {
-    id: 6,
+    id: 14,
     name: "USB-C Hub",
     price: 89.99,
     rating: 4.5,
     reviews: 45,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/52/018594/1.jpg?4079",
     isNew: true,
+    quantity: 1
   },
   {
-    id: 7,
+    id: 15,
     name: "Ergonomic Mouse Pad",
     price: 24.99,
     rating: 4.3,
     reviews: 78,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/98/1004752/1.jpg?9800",
+    quantity: 1
   },
   {
-    id: 8,
+    id: 16,
     name: "Portable Power Bank",
     price: 59.99,
     originalPrice: 79.99,
@@ -92,6 +100,7 @@ const products: Product[] = [
     reviews: 134,
     image: "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/01/4595393/1.jpg?4932",
     badge: "Sale",
+    quantity: 1
   },
 ]
 
