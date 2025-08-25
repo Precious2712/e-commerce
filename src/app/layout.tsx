@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Work_Sans } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { AppProviderComp } from "@/components/useContext/AppContext";
 import { Toaster } from "react-hot-toast";
-
-const geistSans = Geist({
-  // variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const roboto = Work_Sans({
   // variable: "--font-geist-mono",
@@ -23,7 +18,7 @@ function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
     <AppProviderComp>
       {children}
-      <Toaster position="top-right" />
+      <Toaster position="bottom-right" />
     </AppProviderComp>
   );
 }

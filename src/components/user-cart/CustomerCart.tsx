@@ -10,6 +10,7 @@ import {
   DialogTrigger,
 } from "../ui/dialog";
 import { useAppContext } from "../useContext/AppContext";
+import Image from "next/image";
 
 export function CustomerCart() {
   const { cartItem, updateQuantity, removeItem, totalPrice } = useAppContext();
@@ -17,7 +18,7 @@ export function CustomerCart() {
   return (
     <Dialog>
       <DialogTrigger className="text-white cursor-pointer relative">
-        <ShoppingCart className="h-6 w-6" />
+        <ShoppingCart className="h-6 w-6 text-black" />
         {cartItem.length > 0 && (
           <span className="absolute -top-2 -right-2 w-5 h-5 bg-blue-600 rounded-full text-xs text-white flex items-center justify-center">
             {cartItem.length}
@@ -44,10 +45,12 @@ export function CustomerCart() {
                   className="flex items-center gap-3 p-3 border rounded-lg bg-card"
                 >
                   <div className="w-16 h-16 flex-shrink-0">
-                    <img
+                    <Image
                       src={item.image || "/placeholder.svg"}
                       alt={item.name}
-                      className="w-full h-full object-cover rounded-md"
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                   <div className="flex-1 min-w-0">

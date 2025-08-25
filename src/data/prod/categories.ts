@@ -23,8 +23,8 @@ export const dropDown: MenuCategory[] = [
     items: [
       { name: "Men's Clothing", icon: User, path: '/men-collection', id: 0 },
       { name: "Women's Clothing", icon: Users, path: '/women-collection', id: 1 },
-      { name: "Baby Boy Wear", icon: Baby, path: '/baby-girl-cloths', id: 2 },
-      { name: "Baby Girl Wear", icon: Baby, path: '/baby-boy-cloths', id: 3},
+      { name: "Teen Boy Fashion", icon: Baby, path: '/Teen-boy-fashion', id: 2 },
+      { name: "Teen Boy Fashion ", icon: Baby, path: '/Teen-girl-fashion', id: 3},
     ],
   },
   {
@@ -32,9 +32,9 @@ export const dropDown: MenuCategory[] = [
     title: "Gadgets",
     icon: Smartphone,
     items: [
-      { name: "Smartphones", icon: Smartphone, path: 'phones', id: 0 },
-      { name: "Laptops", icon: Laptop, path: '/laptops', id: 1 },
-      { name: "Accessories", icon: ShoppingBag, path:'/Accessories', id: 2},
+      { name: "Smartphones", icon: Smartphone, path: '/items/phone', id: 0 },
+      { name: "Laptops", icon: Laptop, path: '/items/laptop', id: 1 },
+      { name: "Accessories", icon: ShoppingBag, path:'/items', id: 2},
     ],
   },
   {
@@ -42,19 +42,9 @@ export const dropDown: MenuCategory[] = [
     title: "Grocery",
     icon: ShoppingCart,
     items: [
-      { name: "Fresh Produce", icon: ShoppingCart, path: '/Fresh-Produce', id: 0},
-      { name: "Dairy Products", icon: ShoppingCart, path: '/Dairy-Products', id: 1},
+      { name: "Vegatables & Fruits", icon: ShoppingCart, path: '/Vegetables & Fruits', id: 0},
+      { name: "Bakery-products", icon: ShoppingCart, path: '/Dairy-Products', id: 1},
       { name: "Beverages", icon: ShoppingCart, path: '/Beverages', id: 2},
     ],
-  },
-  {
-    id: 4,
-    title: "Home Appliances",
-    icon: Refrigerator,
-    items: [
-      { name: "Kitchen Appliances", icon: Refrigerator, path: '/Kitchen Appliances', id: 0},
-      { name: "Cleaning Equipment", icon: Home, path: '/Cleaning Equipment' , id: 1},
-      { name: "Electronics", icon: Laptop, path: '/Electronics' , id: 2},
-    ],
-  },
+  }
 ]

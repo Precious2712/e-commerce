@@ -12,6 +12,7 @@ import {
 import { useState } from "react"
 import { dropDown } from "../../data/prod/categories";
 import Link from "next/link";
+import { CustomerCart } from "../user-cart/CustomerCart";
 
 
 export function HomeNavBar() {
@@ -24,7 +25,7 @@ export function HomeNavBar() {
     <div className="fixed top-0 w-full z-50 bg-white shadow-lg text-black">
 
       <div className="flex justify-between items-center px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 lg:hidden">
-        <div className="flex items-center space-x-3">
+        <Link href="/" className="flex items-center space-x-3 cursor-pointer">
           <div className="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center shadow-lg">
             <ShoppingBag className="w-5 h-5 text-white" />
           </div>
@@ -32,7 +33,7 @@ export function HomeNavBar() {
             <h1 className="text-white font-bold text-[14px]">Daily Market</h1>
             <p className="text-blue-100 text-xs">Your shopping destination</p>
           </div>
-        </div>
+        </Link>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
@@ -41,6 +42,8 @@ export function HomeNavBar() {
               <span className="sr-only">Open menu</span>
             </Button>
           </SheetTrigger>
+
+          <CustomerCart />
 
           <SheetContent side="right" className="w-80 p-0">
             <SheetHeader className="p-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
@@ -64,36 +67,47 @@ export function HomeNavBar() {
 
                     <div className="ml-4 space-y-1">
                       {category.items.map((item) => (
-                        <Link href={`${item.path}`}>
+                        <Link key={item.id} href={`${item.path}`}>
                           <button
-                            key={item.id}
                             className="w-full flex items-center space-x-3 p-2 rounded-md hover:bg-gray-50 transition-colors text-left group"
                             onClick={() => setIsOpen(false)}
                           >
-                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                            <item.icon className="w-4 h-4 text-gray-400 text-xs group-hover:text-blue-600 transition-colors" />
                             <span className="text-sm text-gray-700 group-hover:text-gray-900 transition-colors">
                               {item.name}
                             </span>
                           </button>
                         </Link>
                       ))}
+
                     </div>
 
                     {index < dropDown.length - 1 && <Separator className="my-4" />}
                   </div>
                 ))}
+
+                <Link href="/items/home-appliances">
+                  <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer group">
+                    <p className="text-[12.5px]">Home-Appliances</p>
+                  </div>
+                </Link>
+
+                <Link href="/items/tvAndAudio">
+                  <div className="flex items-center space-x-3 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer group mt-3">
+                    <p className="text-[12.5px]">Tv & Audios</p>
+                  </div>
+                </Link>
               </div>
 
               <div className="p-4 border-t bg-gray-50">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-                      New
+                      Logout
                     </Badge>
-                    <span className="text-sm text-gray-600">Special Offers</span>
                   </div>
                   <Button variant="outline" size="sm" onClick={() => setIsOpen(false)}>
-                    View All
+                    Signup
                   </Button>
                 </div>
               </div>
@@ -130,20 +144,21 @@ export function HomeNavBar() {
                       <ul className="flex flex-col gap-2">
                         <Link href='/men-collection'>
                           <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                            Men's Clothing
+                            Men&apos;s Clothing
                           </li>
                         </Link>
                         <Link href='/women-collection'>
                           <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                            Women's Clothing
+                            Women&apos;s Clothing
                           </li>
                         </Link>
-                        <Link href='/baby-boy-cloths'>
+
+                        <Link href='/Teen-boy-fashion'>
                           <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
                             Teen Boy Fashion
                           </li>
                         </Link>
-                        <Link href='/baby-girl-cloths'>
+                        <Link href='/Teen-girl-fashion'>
                           <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
                             Teen Girl Fashion
                           </li>
@@ -167,15 +182,21 @@ export function HomeNavBar() {
                     <div className="h-14 w-full"></div>
                     <div className="py-2.5 px-3.5 bg-white text-black shadow-2xl rounded-md">
                       <ul className="flex flex-col gap-2">
-                        <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                          Smartphones
-                        </li>
-                        <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                          Laptops
-                        </li>
-                        <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
-                          Accessories
-                        </li>
+                        <Link href='/items/phones'>
+                          <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
+                            Smartphones
+                          </li>
+                        </Link>
+                        <Link href='/items/laptop'>
+                          <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
+                            Laptops
+                          </li>
+                        </Link>
+                        <Link href='/items'>
+                          <li className="hover:bg-gray-100 px-2 py-1 rounded cursor-pointer transition-colors">
+                            Accessories
+                          </li>
+                        </Link>
                       </ul>
                     </div>
                   </div>
@@ -211,13 +232,22 @@ export function HomeNavBar() {
               </div>
             </li>
 
-            <li className="relative">
-              <p className="py-2 px-1">Home Appliances</p>
-            </li>
+            <Link href="/items/home-appliances">
+              <li className="relative">
+                <p className="py-2 px-1">Home Appliances</p>
+              </li>
+            </Link>
+
+            <Link href="/">
+              <li className="relative cursor-pointer">
+                <p className="py-2 px-1">Home</p>
+              </li>
+            </Link>
           </ul>
         </div>
 
-        <div className="flex gap-2.5 mt-1">
+        <div className="flex gap-5 mt-1">
+          <CustomerCart />
           <Button className="bg-blue-900 hover:bg-blue-800 text-[12px]" variant="ghost">
             Signup
           </Button>

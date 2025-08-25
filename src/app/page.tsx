@@ -1,7 +1,6 @@
 
-import { HexashopPage } from "@/components/clothing/HexashopPage";
+import { HexashopPage } from "@/components/menClothingCategory/HexashopPage";
 import { HomeNavBar } from "@/components/header/HomeNavBar";
-import Image from "next/image";
 
 export default function Home() {
   return (

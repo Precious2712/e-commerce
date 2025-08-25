@@ -1,9 +1,24 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
-    domains: ["encrypted-tbn0.gstatic.com"], // ✅ Add allowed image domains here
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: 'ng.jumia.is',
+        pathname: "/**",   
+      },
+      {
+        protocol: "https",
+        hostname: 'shoprite.ng',
+        pathname: "/**",  
+      },
+      {
+        protocol: "https",
+        hostname: 'images.unsplash.com',
+        pathname: "/**",  
+      },
+    ],
   },
 };
 

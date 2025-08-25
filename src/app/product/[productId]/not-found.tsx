@@ -3,7 +3,14 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
 
 export default function NotFound() {
   return (
@@ -14,7 +21,7 @@ export default function NotFound() {
             Product Not Found
           </DialogTitle>
           <DialogDescription className="text-gray-600">
-            The product you're looking for doesn't exist or has been removed.
+            The product you&apos;re looking for doesn&apos;t exist or has been removed.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>

@@ -1,6 +1,5 @@
-import { boxItem } from "./cart-items";
 
- interface cart {
+interface cart {
     id: number;
     name: string;
     price: number;

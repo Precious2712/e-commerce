@@ -4,7 +4,7 @@ import { WomenWardRobeNav } from "@/components/header/WomenWardRobeNav";
 
 export default function WomenClothingCollectionPage() {
     return (
-        <div>
+        <div className="min-h-screen pb-24 bg-black">
             <WomenWardRobeNav />
         </div>
     )
