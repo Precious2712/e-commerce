@@ -141,7 +141,7 @@ export function Shorts() {
           </div>
 
           <CardFooter className="p-3 lg:p-4 flex flex-col items-start gap-2">
-            <h3 className="font-medium text-sm lg:text-sm line-clamp-2 text-white group-hover:text-white transition-colors">
+            <h3 className="font-medium text-[10.3px] lg:text-sm line-clamp-2 text-white group-hover:text-white transition-colors">
               {product.name}
             </h3>
 

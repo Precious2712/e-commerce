@@ -142,7 +142,7 @@ export function MenFashionItem() {
           </div>
 
           <CardFooter className="p-3 lg:p-4 flex flex-col items-start gap-2">
-            <p className="font-medium text-[9px] lg:text-sm line-clamp-2 text-white group-hover:text-white transition-colors">
+            <p className="font-medium text-[12px] lg:text-sm line-clamp-2 text-white group-hover:text-white transition-colors">
               {product.name}
             </p>
 
