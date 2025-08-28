@@ -23,7 +23,7 @@ interface Product {
 const products: Product[] = [
   {
     id: 9,
-    name: "Wireless Headphones",
+    name: "Men design",
     price: 199.99,
     originalPrice: 249.99,
     rating: 4.8,
@@ -55,7 +55,7 @@ const products: Product[] = [
   },
   {
     id: 12,
-    name: "Wireless Charging Pad",
+    name: "Men top shirt",
     price: 49.99,
     rating: 4.4,
     reviews: 67,
@@ -85,7 +85,7 @@ const products: Product[] = [
   },
   {
     id: 15,
-    name: "Ergonomic Mouse Pad",
+    name: "Button shirt",
     price: 24.99,
     rating: 4.3,
     reviews: 78,
@@ -142,9 +142,9 @@ export function MenFashionItem() {
           </div>
 
           <CardFooter className="p-3 lg:p-4 flex flex-col items-start gap-2">
-            <h3 className="font-medium text-sm lg:text-sm line-clamp-2 text-white group-hover:text-white transition-colors">
+            <p className="font-medium text-sm lg:text-[10px] line-clamp-2 text-white group-hover:text-white transition-colors">
               {product.name}
-            </h3>
+            </p>
 
             <div className="flex items-center gap-1">
               <div className="flex items-center">
