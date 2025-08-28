@@ -13,6 +13,7 @@ import { useState } from "react"
 import { dropDown } from "../../data/prod/categories";
 import Link from "next/link";
 import { CustomerCart } from "../user-cart/CustomerCart";
+import { useAppContext } from "../useContext/AppContext";
 
 
 export function HomeNavBar() {
@@ -20,6 +21,7 @@ export function HomeNavBar() {
   const [fashion, setFashion] = useState(false);
   const [gadgets, setGadgets] = useState(false);
   const [grocery, setGrocery] = useState(false);
+  const { handleLogout } = useAppContext();
 
   return (
     <div className="fixed top-0 w-full z-50 bg-white shadow-lg text-black">
@@ -69,7 +71,7 @@ export function HomeNavBar() {
                       {category.items.map((item) => (
                         <Link key={item.id} href={`${item.path}`}>
                           <button
-                            className="w-full flex items-center space-x-3 p-2 rounded-md hover:bg-gray-50 transition-colors text-left group"
+                            className="w-full flex items-center space-x-3 p-2 rounded-md hover:bg-gray-50 transition-colors text-left group cursor-pointer"
                             onClick={() => setIsOpen(false)}
                           >
                             <item.icon className="w-4 h-4 text-gray-400 text-xs group-hover:text-blue-600 transition-colors" />
@@ -101,14 +103,16 @@ export function HomeNavBar() {
 
               <div className="p-4 border-t bg-gray-50">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <Badge variant="secondary" className="bg-blue-100 text-blue-800">
+                  <div className="flex items-center space-x-2 cursor-pointer">
+                    <Badge onClick={handleLogout} variant="secondary" className="bg-blue-100 text-blue-800">
                       Logout
                     </Badge>
                   </div>
-                  <Button variant="outline" size="sm" onClick={() => setIsOpen(false)}>
-                    Signup
-                  </Button>
+                  <Link href='/auth'>
+                    <Button className="cursor-pointer" variant="outline" size="sm" onClick={() => setIsOpen(false)}>
+                      Signup
+                    </Button>
+                  </Link>
                 </div>
               </div>
 
@@ -248,10 +252,12 @@ export function HomeNavBar() {
 
         <div className="flex gap-5 mt-1">
           <CustomerCart />
-          <Button className="bg-blue-900 hover:bg-blue-800 text-[12px]" variant="ghost">
-            Signup
-          </Button>
-          <Button className="bg-red-400 hover:bg-red-500 text-[12px]" variant="ghost">
+          <Link href='/auth'>
+            <Button className="bg-blue-900 hover:bg-blue-800 text-[12px] cursor-pointer" variant="ghost">
+              Signup
+            </Button>
+          </Link>
+          <Button onClick={handleLogout} className="bg-red-400 hover:bg-red-500 text-[12px] cursor-pointer" variant="ghost">
             Logout
           </Button>
         </div>

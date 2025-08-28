@@ -18,6 +18,31 @@ const nextConfig: NextConfig = {
         hostname: 'images.unsplash.com',
         pathname: "/**",  
       },
+      {
+        protocol: "https",
+        hostname: 'www.supermart.ng',
+        pathname: "/**",  
+      },
+       {
+        protocol: "https",
+        hostname: 'www.supermart.ng',
+        pathname: "/**",  
+      },
+      {
+        protocol: "https",
+        hostname: 'justriteonline.com',
+        pathname: "/**",  
+      },
+       {
+        protocol: "https",
+        hostname: 'freshtodommot.com',
+        pathname: "/**",  
+      },
+       {
+        protocol: "https",
+        hostname: 'vegetalfoods.com',
+        pathname: "/**",  
+      },
     ],
   },
 };

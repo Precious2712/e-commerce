@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 
 export function CategoryOne() {
@@ -53,13 +54,15 @@ export function CategoryOne() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Smart Phone</h2>
                     <p className="text-xs mb-3 text-center px-2">Latest technology</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-blue-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/items/phones'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-blue-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -80,13 +83,15 @@ export function CategoryOne() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Laptop</h2>
                     <p className="text-xs mb-3 text-center px-2">High performance</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-purple-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/items/laptop'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-purple-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -107,13 +112,15 @@ export function CategoryOne() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Vegetables & Fruits</h2>
                     <p className="text-xs mb-3 text-center px-2">Organic & healthy</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-green-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/items/accessories-store'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-green-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -124,7 +131,7 @@ export function CategoryOne() {
                 whileHover="hover"
             >
                 <Image
-                    src="https://shoprite.ng/wp-content/uploads/2023/03/bd.jpg"
+                    src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/03/0274463/1.jpg?4409"
                     alt="Smart phones"
                     width={300}
                     height={400}
@@ -135,13 +142,15 @@ export function CategoryOne() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Bakery Product</h2>
                     <p className="text-xs mb-3 text-center px-2">Fresh & natural</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-orange-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/items/bakery-products'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-orange-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>

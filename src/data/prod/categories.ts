@@ -1,5 +1,5 @@
 import { type LucideIcon } from 'lucide-react'
-import { Shirt, User, Users, Baby, Smartphone, Laptop, ShoppingBag, ShoppingCart, Refrigerator, Home } from 'lucide-react'
+import { Shirt, User, Users, Baby, Smartphone, Laptop, ShoppingBag, ShoppingCart } from 'lucide-react'
 
 interface MenuItem {
   id: number;
@@ -24,7 +24,7 @@ export const dropDown: MenuCategory[] = [
       { name: "Men's Clothing", icon: User, path: '/men-collection', id: 0 },
       { name: "Women's Clothing", icon: Users, path: '/women-collection', id: 1 },
       { name: "Teen Boy Fashion", icon: Baby, path: '/Teen-boy-fashion', id: 2 },
-      { name: "Teen Boy Fashion ", icon: Baby, path: '/Teen-girl-fashion', id: 3},
+      { name: "Teen girl Fashion ", icon: Baby, path: '/Teen-girl-fashion', id: 3},
     ],
   },
   {
@@ -32,7 +32,7 @@ export const dropDown: MenuCategory[] = [
     title: "Gadgets",
     icon: Smartphone,
     items: [
-      { name: "Smartphones", icon: Smartphone, path: '/items/phone', id: 0 },
+      { name: "Smartphones", icon: Smartphone, path: '/items/phones', id: 0 },
       { name: "Laptops", icon: Laptop, path: '/items/laptop', id: 1 },
       { name: "Accessories", icon: ShoppingBag, path:'/items', id: 2},
     ],
@@ -42,9 +42,9 @@ export const dropDown: MenuCategory[] = [
     title: "Grocery",
     icon: ShoppingCart,
     items: [
-      { name: "Vegatables & Fruits", icon: ShoppingCart, path: '/Vegetables & Fruits', id: 0},
-      { name: "Bakery-products", icon: ShoppingCart, path: '/Dairy-Products', id: 1},
-      { name: "Beverages", icon: ShoppingCart, path: '/Beverages', id: 2},
+      { name: "Accessories-store", icon: ShoppingCart, path: '/items/accessories-store', id: 0},
+      { name: "Bakery-products", icon: ShoppingCart, path: '/items/bakery-products', id: 1},
+      { name: "Beverages", icon: ShoppingCart, path: '/items/Beverages', id: 2},
     ],
   }
 ]

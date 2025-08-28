@@ -9,7 +9,7 @@ import { useAppContext } from "../useContext/AppContext"
 import { DesktopBabyBoyComp, MobileBabyBoyComp } from "../Gender-Category/AllBabyBoyComp"
 
 export function BabyBoyPage() {
-  const { setItem } = useAppContext();
+  const { setItem, handleLogout } = useAppContext();
   const [mobile, setMobile] = useState(false)
 
   function handleShowItem(menu: string) {
@@ -44,18 +44,20 @@ export function BabyBoyPage() {
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <Button
-            className="h-[5.5vh] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xs shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
-            size="sm"
-          >
-            <User className="w-4 h-4 mr-2" />
-            Signup
-          </Button>
+          <Link href='/auth'>
+            <Button
+              className="h-[5.5vh] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xs shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
+              size="sm"
+            >
+              <User className="w-4 h-4 mr-2" />
+              Signup
+            </Button>
+          </Link>
           <Button
             className="h-[5.5vh] bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white text-xs shadow-lg shadow-red-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-red-500/30 hover:-translate-y-0.5 cursor-pointer"
             size="sm"
           >
-            <LogOut className="w-4 h-4 mr-2" />
+            <LogOut onClick={handleLogout} className="w-4 h-4 mr-2" />
             Logout
           </Button>
           <CustomerCart />
@@ -131,15 +133,18 @@ export function BabyBoyPage() {
                 >
                   {mobile ? <X className="w-5 h-5" /> : <AlignRight className="w-5 h-5" />}
                 </Button>
+                <Link href='/auth'>
+                  <Button
+                    className="w-full h-[5.5vh] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xs shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
+                    size="sm"
+                  >
+                    <User className="w-4 h-4 mr-2" />
+                    Signup
+                  </Button>
+                </Link>
                 <Button
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg shadow-blue-500/25 transition-all duration-200"
-                  size="sm"
-                >
-                  <User className="w-4 h-4 mr-2" />
-                  Signup
-                </Button>
-                <Button
-                  className="w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg shadow-red-500/25 transition-all duration-200"
+                  onClick={handleLogout}
+                  className="mt-3.5 w-full bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-lg shadow-red-500/25 transition-all duration-200"
                   size="sm"
                 >
                   <LogOut className="w-4 h-4 mr-2" />

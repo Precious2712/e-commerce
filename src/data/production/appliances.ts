@@ -13,7 +13,7 @@ interface Product {
 
 export const appliances: Product[] = [
     {
-        id: 9,
+        id: 161,
         name: "Wireless Headphones",
         price: 199.99,
         originalPrice: 249.99,
@@ -24,7 +24,7 @@ export const appliances: Product[] = [
         quantity: 1
     },
     {
-        id: 10,
+        id: 162,
         name: "Smart Fitness Watch",
         price: 299.99,
         rating: 4.6,
@@ -34,7 +34,7 @@ export const appliances: Product[] = [
         quantity: 1
     },
     {
-        id: 11,
+        id: 163,
         name: "Minimalist Backpack",
         price: 79.99,
         originalPrice: 99.99,
@@ -45,7 +45,7 @@ export const appliances: Product[] = [
         quantity: 1
     },
     {
-        id: 12,
+        id: 164,
         name: "Wireless Charging Pad",
         price: 49.99,
         rating: 4.4,
@@ -54,7 +54,7 @@ export const appliances: Product[] = [
         quantity: 1
     },
     {
-        id: 13,
+        id: 165,
         name: "Bluetooth Speaker",
         price: 129.99,
         originalPrice: 159.99,
@@ -65,7 +65,7 @@ export const appliances: Product[] = [
         quantity: 1
     },
     {
-        id: 14,
+        id: 166,
         name: "USB-C Hub",
         price: 89.99,
         rating: 4.5,
@@ -75,7 +75,7 @@ export const appliances: Product[] = [
         quantity: 1
     },
     {
-        id: 15,
+        id: 167,
         name: "Ergonomic Mouse Pad",
         price: 24.99,
         rating: 4.3,
@@ -84,7 +84,7 @@ export const appliances: Product[] = [
         quantity: 1
     },
     {
-        id: 16,
+        id: 168,
         name: "Portable Power Bank",
         price: 59.99,
         originalPrice: 79.99,

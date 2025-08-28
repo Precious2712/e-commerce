@@ -22,7 +22,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 1,
+    id: 137,
     name: "Sexy Cotton Pants",
     price: 199.99,
     originalPrice: 249.99,
@@ -33,7 +33,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 2,
+    id: 138,
     name: "Comfortable Panties",
     price: 299.99,
     rating: 4.6,
@@ -43,7 +43,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 3,
+    id: 139,
     name: "Ladies Cotton Panties",
     price: 79.99,
     originalPrice: 99.99,
@@ -54,7 +54,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 4,
+    id: 140,
     name: "Lace G-string Panties",
     price: 49.99,
     rating: 4.4,
@@ -63,7 +63,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 5,
+    id: 141,
     name: "Padded Bra-top for Ladies",
     price: 129.99,
     originalPrice: 159.99,
@@ -74,7 +74,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 6,
+    id: 142,
     name: "Strapless Bra Tube",
     price: 89.99,
     rating: 4.5,
@@ -84,7 +84,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 7,
+    id: 143,
     name: "Night Wear In and Out",
     price: 24.99,
     rating: 4.3,
@@ -93,7 +93,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 8,
+    id: 144,
     name: "Sexy Lace Panties",
     price: 59.99,
     originalPrice: 79.99,

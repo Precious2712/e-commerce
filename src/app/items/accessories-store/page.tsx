@@ -4,7 +4,7 @@ import { HomeNavBar } from "@/components/header/HomeNavBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardFooter } from "@/components/ui/card";
 import { useAppContext } from "@/components/useContext/AppContext";
-import { bakeryProducts } from "@/data/production/bakeryPoducts";
+import { store } from "@/data/production/store";
 import { Badge, Heart, ShoppingCart, Star } from "lucide-react";
 import Image from "next/image";
 
@@ -16,7 +16,7 @@ export default function Accessories() {
             <HomeNavBar />
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 pt-24 w-[95%] m-auto">
-                {bakeryProducts.map((product) => (
+                {store.map((product) => (
                     <Card
                         key={product.id}
                         className="group border-border hover:shadow-lg transition-all duration-300 hover:border-primary/20 p-0 bg-black overflow-hidden"

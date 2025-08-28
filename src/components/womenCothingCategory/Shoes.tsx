@@ -20,7 +20,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 1,
+    id: 129,
     name: "Scandal heel slippers",
     price: 199.99,
     originalPrice: 249.99,
@@ -31,7 +31,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 2,
+    id: 130,
     name: "Casual shoe",
     price: 299.99,
     rating: 4.6,
@@ -41,7 +41,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 3,
+    id: 131,
     name: "Mateamoda heels",
     price: 79.99,
     originalPrice: 99.99,
@@ -52,7 +52,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 4,
+    id: 132,
     name: "Outdoor special shoes",
     price: 49.99,
     rating: 4.4,
@@ -61,7 +61,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 5,
+    id: 133,
     name: "Gladiator sandals heel",
     price: 129.99,
     originalPrice: 159.99,
@@ -72,7 +72,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 6,
+    id: 134,
     name: "Women sandal",
     price: 89.99,
     rating: 4.5,
@@ -82,7 +82,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 7,
+    id: 135,
     name: "Flat fashion sandal",
     price: 24.99,
     rating: 4.3,
@@ -91,7 +91,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 8,
+    id: 136,
     name: "Heel slippers",
     price: 59.99,
     originalPrice: 79.99,

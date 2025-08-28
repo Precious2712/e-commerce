@@ -20,7 +20,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 1,
+    id: 105,
     name: "Diamond necklace pendant",
     price: 199.99,
     originalPrice: 249.99,
@@ -31,7 +31,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 2,
+    id: 106,
     name: "Double layer necklace",
     price: 299.99,
     rating: 4.6,
@@ -41,7 +41,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 3,
+    id: 107,
     name: "Pink peach pendant",
     price: 79.99,
     originalPrice: 99.99,
@@ -52,7 +52,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 4,
+    id: 108,
     name: "Necklace earings bracelet",
     price: 49.99,
     rating: 4.4,
@@ -61,7 +61,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 5,
+    id: 109,
     name: "Multi layer pendant",
     price: 129.99,
     originalPrice: 159.99,
@@ -72,7 +72,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 6,
+    id: 110,
     name: "Gemstone bracelet",
     price: 89.99,
     rating: 4.5,
@@ -82,7 +82,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 7,
+    id: 111,
     name: "Pink bracelet",
     price: 24.99,
     rating: 4.3,
@@ -91,7 +91,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 8,
+    id: 112,
     name: "Lady hand chain",
     price: 59.99,
     originalPrice: 79.99,

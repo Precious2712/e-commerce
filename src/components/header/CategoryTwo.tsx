@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import Image from "next/image";
+import Link from "next/link";
 
 export function CategoryTwo() {
     const containerVariants = {
@@ -52,13 +53,15 @@ export function CategoryTwo() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Women</h2>
                     <p className="text-xs mb-3 text-center px-2">Latest trends</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-pink-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/women-collection'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-pink-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -80,13 +83,15 @@ export function CategoryTwo() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Men</h2>
                     <p className="text-xs mb-3 text-center px-2">Style & comfort</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-slate-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/men-collection'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-slate-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -107,13 +112,15 @@ export function CategoryTwo() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Teen-boy-fashion</h2>
                     <p className="text-xs mb-3 text-center px-2">Fun & colorful</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-cyan-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/Teen-boy-fashion'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-cyan-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -134,13 +141,15 @@ export function CategoryTwo() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Teen-girl-fashion</h2>
                     <p className="text-xs mb-3 text-center px-2">Fun & colorful</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-cyan-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/Teen-girl-fashion'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-cyan-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -157,25 +166,20 @@ export function CategoryTwo() {
                     height={400}
                     className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
                 />
-                <Image
-                    src="https://ng.jumia.is/cms/0-0-0-sandbox/freelinks/mobile-accessories_300x300.png"
-                    alt="Smart phones"
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
-                />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-amber-900/80 via-amber-600/40 to-transparent flex flex-col items-center justify-center text-white">
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Accessories</h2>
                     <p className="text-xs mb-3 text-center px-2">Complete your look</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-amber-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/items'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-amber-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -196,13 +200,15 @@ export function CategoryTwo() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Beverages</h2>
                     <p className="text-xs mb-3 text-center px-2">Complete your look</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-amber-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/items/bakery-products'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-amber-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>
@@ -212,13 +218,6 @@ export function CategoryTwo() {
                 variants={cardVariants}
                 whileHover="hover"
             >
-                <Image
-                    src="https://ng.jumia.is/cms/0-0-black-friday/2024/Thumbnails/appliances.png"
-                    alt="Smart phones"
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover transition-transform group-hover:scale-110 duration-500"
-                />
 
                 <Image
                     src="https://ng.jumia.is/cms/0-0-black-friday/2024/Thumbnails/appliances.png"
@@ -231,13 +230,15 @@ export function CategoryTwo() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Home-Appliances</h2>
                     <p className="text-xs mb-3 text-center px-2">Complete your look</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-amber-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/items/home-appliances'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-amber-900 bg-transparent text-xs transition-all duration-300 cursor-pointer"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
 
                 </div>
@@ -260,13 +261,15 @@ export function CategoryTwo() {
                     <h2 className="text-xs lg:text-xl font-bold mb-2">Tv & Audio</h2>
                     <p className="text-xs mb-3 text-center px-2">Complete your look</p>
                     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="border-white text-white hover:bg-white hover:text-amber-900 bg-transparent text-xs transition-all duration-300"
-                        >
-                            Discover More
-                        </Button>
+                        <Link href='/items/tvAndAudio'>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="border-white text-white hover:bg-white hover:text-amber-900 bg-transparent text-xs transition-all duration-300"
+                            >
+                                Discover More
+                            </Button>
+                        </Link>
                     </motion.div>
 
                 </div>

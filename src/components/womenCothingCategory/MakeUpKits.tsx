@@ -20,7 +20,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 1,
+    id: 121,
     name: "Matte Lipstick Set",
     price: 199.99,
     originalPrice: 249.99,
@@ -31,7 +31,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 2,
+    id: 122,
     name: "Lip Gloss Nude",
     price: 299.99,
     rating: 4.6,
@@ -41,7 +41,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 3,
+    id: 123,
     name: "Color Change Lip Gloss",
     price: 79.99,
     originalPrice: 99.99,
@@ -52,7 +52,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 4,
+    id: 124,
     name: "Water Liquid Foundation",
     price: 49.99,
     rating: 4.4,
@@ -61,7 +61,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 5,
+    id: 125,
     name: "Makeup Foundation",
     price: 129.99,
     originalPrice: 159.99,
@@ -72,7 +72,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 6,
+    id: 126,
     name: "Nivea Dry Roll on",
     price: 89.99,
     rating: 4.5,
@@ -82,7 +82,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 7,
+    id: 127,
     name: "Water Oil Lubricant",
     price: 24.99,
     rating: 4.3,
@@ -91,7 +91,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 8,
+    id: 128,
     name: "Black Facial Mask",
     price: 59.99,
     originalPrice: 79.99,

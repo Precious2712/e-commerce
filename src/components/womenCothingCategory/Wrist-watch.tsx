@@ -20,7 +20,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 1,
+    id: 145,
     name: "Gold Wrist-watch",
     price: 199.99,
     originalPrice: 249.99,
@@ -31,7 +31,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 2,
+    id: 146,
     name: "2in One Wrist-watch",
     price: 299.99,
     rating: 4.6,
@@ -41,7 +41,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 3,
+    id: 147,
     name: "New Ladies Wrist-watch",
     price: 79.99,
     originalPrice: 99.99,
@@ -52,7 +52,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 4,
+    id: 148,
     name: "Elegant Wrist-watch",
     price: 49.99,
     rating: 4.4,
@@ -61,7 +61,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 5,
+    id: 149,
     name: "Leather Strap Wrist-watch",
     price: 129.99,
     originalPrice: 159.99,
@@ -72,7 +72,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 6,
+    id: 150,
     name: "Dating Wrist-watch",
     price: 89.99,
     rating: 4.5,
@@ -82,7 +82,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 7,
+    id: 151,
     name: "Diamond Wrist-watch",
     price: 24.99,
     rating: 4.3,
@@ -91,7 +91,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 8,
+    id: 152,
     name: "Bracelet Wrist-watch",
     price: 59.99,
     originalPrice: 79.99,

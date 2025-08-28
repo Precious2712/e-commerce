@@ -22,7 +22,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    id: 1,
+    id: 113,
     name: "Body-con dress",
     price: 199.99,
     originalPrice: 249.99,
@@ -33,7 +33,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 2,
+    id: 114,
     name: "Sleeveless Stretchy Gown",
     price: 299.99,
     rating: 4.6,
@@ -43,7 +43,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 3,
+    id: 115,
     name: "Corporate Gown",
     price: 79.99,
     originalPrice: 99.99,
@@ -54,7 +54,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 4,
+    id: 116,
     name: "Ladies Short Gown",
     price: 49.99,
     rating: 4.4,
@@ -63,7 +63,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 5,
+    id: 117,
     name: "Style Elegant Floral V-neck",
     price: 129.99,
     originalPrice: 159.99,
@@ -74,7 +74,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 6,
+    id: 118,
     name: "Crop Top for Ladies",
     price: 89.99,
     rating: 4.5,
@@ -84,7 +84,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 7,
+    id: 119,
     name: "Ladies Party Gown",
     price: 24.99,
     rating: 4.3,
@@ -93,7 +93,7 @@ const products: Product[] = [
     quantity: 1
   },
   {
-    id: 8,
+    id: 120,
     name: "Classy Gown",
     price: 59.99,
     originalPrice: 79.99,
