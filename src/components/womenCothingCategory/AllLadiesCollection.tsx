@@ -34,7 +34,7 @@ const products: Product[] = [
   },
   {
     id: 90,
-    name: "Lady Casual Hot Dress",
+    name: "Casual Hot Dress",
     price: 299.99,
     rating: 4.6,
     reviews: 89,

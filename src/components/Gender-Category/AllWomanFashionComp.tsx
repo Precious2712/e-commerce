@@ -17,7 +17,8 @@ export function DesktopWomantFashionComp() {
         <div>
             {items === '' && (
                 <div className="">
-                   <AllLadiesCollection />
+                   {/* <AllLadiesCollection /> */}
+                   <LadiesWears />
                 </div>
             )}
 

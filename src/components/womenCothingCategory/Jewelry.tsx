@@ -140,7 +140,7 @@ export function Jewelry() {
           </div>
 
           <CardFooter className="p-3 lg:p-4 flex flex-col items-start gap-2 text-white">
-            <h3 className="font-medium text-sm lg:text-sm line-clamp-2">
+            <h3 className="font-medium text-[9px] lg:text-sm line-clamp-2">
               {product.name}
             </h3>
 

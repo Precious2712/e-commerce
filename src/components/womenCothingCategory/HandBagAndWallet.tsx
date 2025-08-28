@@ -141,7 +141,7 @@ export function HandBagAndWallet() {
           </div>
 
           <CardFooter className="p-3 lg:p-4 flex flex-col items-start gap-2">
-             <p className="font-medium text-sm lg:text-xs line-clamp-1 min-h-[1.25rem] leading-tight">
+             <p className="font-medium text-white text-sm lg:text-xs line-clamp-1 min-h-[1.25rem] leading-tight">
               {product.name}
             </p>
 
