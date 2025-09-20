@@ -85,7 +85,7 @@ export function HexashopPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
                   >
-                    We Are Hexashop
+                    We Are Shoping Mall
                   </motion.h1>
                   <motion.p
                     className="text-base mb-4 max-w-md"
@@ -93,7 +93,7 @@ export function HexashopPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.6 }}
                   >
-                    Lorem ipsum is simply dummy text of the printing and typesetting industry.
+                    Serving you the best products.
                   </motion.p>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
