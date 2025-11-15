@@ -46,7 +46,7 @@ export function BabyGirlPage() {
         <div className="hidden lg:flex items-center gap-3">
           <Link href='/auth'>
             <Button
-              className="h-[5.5vh] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xs shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
+              className=" bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xs shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
               size="sm"
             >
               <User className="w-4 h-4 mr-2" />
@@ -55,7 +55,7 @@ export function BabyGirlPage() {
           </Link>
           <Button
             onClick={handleLogout}
-            className="h-[5.5vh] bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white text-xs shadow-lg shadow-red-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-red-500/30 hover:-translate-y-0.5 cursor-pointer"
+            className=" bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white text-xs shadow-lg shadow-red-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-red-500/30 hover:-translate-y-0.5 cursor-pointer"
             size="sm"
           >
             <LogOut className="w-4 h-4 mr-2" />
@@ -87,7 +87,7 @@ export function BabyGirlPage() {
 
             <nav className="space-y-3">
               <Link href='/'>
-                <button className="bg-blue-500 text-[13px] w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
+                <button className="bg-blue-500 text-[13px] w-full h-7 text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
                   <span>Home</span>
                 </button>
               </Link>
@@ -96,9 +96,9 @@ export function BabyGirlPage() {
                   <button
                     key={i}
                     onClick={() => handleShowItem(item)}
-                    className="w-full h-[6vh] text-left px-3.5 rounded-xl text-xs text-white hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-700 cursor-pointer"
+                    className="w-full mt-3 text-left px-3.5 rounded-xl text-xs text-white  transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-700 cursor-pointer"
                   >
-                    <span className="font-medium">{item}</span>
+                    <span className="font-medium hover:text-red-600">{item}</span>
                   </button>
                 ))}
               </div>
@@ -106,11 +106,13 @@ export function BabyGirlPage() {
           </div>
         </aside>
 
-        <div className="hidden lg:block pt-24 ml-[230px] w-[80%]">
-          <DesktopBabyGirlComp />
+        <div className="hidden lg:flex justify-center pt-30 flex-1 ml-[190px]">
+          <div className="w-5xl mx-auto">
+            <DesktopBabyGirlComp />
+          </div>
         </div>
 
-        <div className="pt-24 lg:hidden">
+        <div className="pt-24 w-[95%] m-auto lg:hidden">
           <MobileBabyGirlComp />
         </div>
 
@@ -123,20 +125,20 @@ export function BabyGirlPage() {
             onClick={handleSideBar}
           />
 
-          <aside className="lg:hidden fixed left-0 top-0 w-full h-screen bg-white shadow-2xl shadow-slate-900/20 z-50 transform transition-transform duration-300 ease-out overflow-y-auto scrollbar-hide">
+          <aside className="lg:hidden fixed left-0 top-0 w-[70%] h-screen bg-white shadow-2xl shadow-slate-900/20 z-50 transform transition-transform duration-300 ease-out overflow-y-auto scrollbar-hide">
             <div className="pt-7 px-6 pb-6">
 
               <div className="mb-8 space-y-3">
-                <Button
+                {/* <Button
                   onClick={handleSideBar}
                   className="lg:hidden bg-slate-100 hover:bg-slate-200 text-slate-700 shadow-md transition-all duration-200 hover:shadow-lg cursor-pointer"
                   size="sm"
                 >
                   {mobile ? <X className="w-5 h-5" /> : <AlignRight className="w-5 h-5" />}
-                </Button>
+                </Button> */}
                 <Link href='/auth'>
                   <Button
-                    className="w-full h-[5.5vh] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xs shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
+                    className="w-full  bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-xs shadow-lg shadow-blue-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 cursor-pointer"
                     size="sm"
                   >
                     <User className="w-4 h-4 mr-2" />
@@ -160,16 +162,16 @@ export function BabyGirlPage() {
 
               <nav className="space-y-2">
                 <Link href='/'>
-                  <button className="bg-blue-500 w-full h-[6vh] text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
+                  <button className="bg-blue-500 w-full h-7 text-left px-3.5 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer">
                     <span className="text-[12px]">Home</span>
                   </button>
                 </Link>
-                <div className="mt-3 flex flex-col gap-3.5">
+                <div className="mt-3 flex flex-col gap-5">
                   {menuItems.map((item, i) => (
                     <button
                       key={i}
                       onClick={() => handleShowItem(item)}
-                      className="w-full h-[6vh] text-left px-4 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
+                      className="w-full h-7 text-left px-4 rounded-xl text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 hover:shadow-md hover:shadow-blue-500/10 hover:translate-x-1 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:bg-blue-50 cursor-pointer"
                     >
                       <span className="font-medium text-[12px]">{item}</span>
                     </button>

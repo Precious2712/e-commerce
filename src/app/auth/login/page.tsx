@@ -4,7 +4,6 @@ import type React from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowLeft } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -123,14 +122,15 @@ export default function Login() {
               Log in
             </Button>
 
-            <Link href='/auth'>
-              <div className="flex items-center justify-center gap-2 mt-4 text-gray-600 hover:text-amber-600 transition-colors cursor-pointer">
-                <ArrowLeft className="w-4 h-4" />
-                <p className="text-sm">
-                  Don&apos;t have an account? <span className="underline font-medium">Sign up</span>
-                </p>
-              </div>
-            </Link>
+
+            <div className="flex items-center justify-center gap-2 mt-4 text-gray-600  transition-colors cursor-pointer">
+              <p className="text-sm">
+                Don&apos;t have an account?
+              </p>
+              <Link href='/auth'>
+                <span className="underline font-medium">Sign up</span>
+              </Link>
+            </div>
           </form>
         </div>
       </div>

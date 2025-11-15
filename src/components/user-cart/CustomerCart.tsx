@@ -104,9 +104,7 @@ export function CustomerCart() {
                 <span className="font-bold">${totalPrice.toFixed(2)}</span>
               </div>
             </div>
-            <button className="w-full bg-primary text-primary-foreground py-2 px-4 rounded-md hover:bg-primary/90 transition-colors">
-              Proceed to Checkout
-            </button>
+          
           </div>
         )}
       </DialogContent>

@@ -4,10 +4,10 @@ import type React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { ArrowLeft } from "lucide-react"
 import { useState } from "react"
 import toast from "react-hot-toast"
 import { useRouter } from "next/navigation"
+import Link from "next/link";
 
 export default function Signup() {
   const router = useRouter();
@@ -140,11 +140,13 @@ export default function Signup() {
               Create Account
             </Button>
 
-            <div className="flex items-center justify-center gap-2 mt-4 text-gray-600 hover:text-amber-600 transition-colors cursor-pointer">
-              <ArrowLeft className="w-4 h-4" />
+            <div className="flex items-center justify-center gap-2 mt-4 text-gray-600  transition-colors cursor-pointer">
               <p className="text-sm">
-                Already have an account? <span className="underline font-medium">Sign in</span>
+                Already have an account?
               </p>
+              <Link href='/auth/login' >
+                <span className="underline font-medium">Sign in</span>
+              </Link>
             </div>
           </form>
         </div>

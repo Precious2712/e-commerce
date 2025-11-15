@@ -12,10 +12,10 @@ export default function Accessories() {
     const { handleAddToCart } = useAppContext();
     
     return (
-        <div className="bg-black pb-24">
+        <div className="bg-black pb-24 min-h-screen">
             <HomeNavBar />
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 pt-24 w-[95%] m-auto">
+            <div className="w-[95%] mx-auto grid grid-cols-2 gap-3 lg:w-5xl lg:grid-cols-3 pt-28 lg:gap-8 xl:w-6xl">
                 {store.map((product) => (
                     <Card
                         key={product.id}
