@@ -47,7 +47,7 @@ export function HomeNavBar() {
 
           <CustomerCart />
 
-          <SheetContent side="right" className="w-80 p-0">
+          <SheetContent side="right" className="w-80 p-0 ">
             <SheetHeader className="p-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
               {/* <SheetTitle className="text-white text-left">Browse Categories</SheetTitle> */}
             </SheetHeader>
